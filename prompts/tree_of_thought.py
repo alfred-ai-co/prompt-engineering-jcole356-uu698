@@ -1,13 +1,11 @@
 TREE_OF_THOUGHT_PROMPT = """
-  Given the following topic {input}, generate a quiz with 5 questions.
+  Given the following topic {input}, generate a quiz with a randon number of questions between 1 to 5.
 
-  Create questions that are not common knowledge, but true
+  If the quiz has more than three questions, make each question progressively more difficult.
 
-  If the question is birds, provide a hint in the question text
+  For all questions after the third, provide a hint in the question text
 
   For each question return 6 multiple choice answers
-
-  Make the wrong answers seem very likely to be true
 
   Return the questions and answers as a JSON object in the following format:
 
