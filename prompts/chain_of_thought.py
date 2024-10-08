@@ -1,7 +1,7 @@
 CHAIN_OF_THOUGHT_PROMPT = """
-  Given the following topic {input}, generate a quiz with 5 questions.
+  Given the following topic {input}, generate a quiz with a randon number of questions between 1 to 5.
 
-  For each question return 6 multiple choice answers
+  For each question return at least 4 multiple choice answers
 
   Return the questions and answers as a JSON object in the following format:
 
