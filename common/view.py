@@ -88,7 +88,7 @@ class View:
             if quiz_submit:
                 controller.set_view(self)
                 is_correct = controller.answer_question(choice.key, question)
-                self.show_answer_feedback(is_correct)
+                self.show_answer_feedback(is_correct, question.explanation)
                 controller.handle_quiz_progression()
                 self.canvas.empty()
             
@@ -124,7 +124,7 @@ class View:
     
     #################################
     # Util Methods for handling view logic
-    def show_answer_feedback(self, is_correct):
+    def show_answer_feedback(self, is_correct, explanation):
         if 'total_correct' not in ss or 'total_incorrect' not in ss:
             ss.total_correct = 0
             ss.total_incorrect = 0
@@ -133,7 +133,7 @@ class View:
             st.success("Correct!")
             ss.total_correct += 1
         else:
-            st.error("Incorrect")
+            st.error("Incorrect: " + explanation)
             ss.total_incorrect += 1
     
     def unlock_callback(self):

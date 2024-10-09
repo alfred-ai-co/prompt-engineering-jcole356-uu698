@@ -20,6 +20,7 @@ class Question(BaseModel):
     question: str = Field(..., description="The question to be asked")
     choices: list[Choice] = Field(..., description="The choices for the question")
     answer: str = Field(..., description="The answer to the question. Validated against choices to ensure answer exists in the choices list based on the key. Exists as a single character as a key.")
+    explanation: str = Field(default="Better luck next time!", description="An explanation of the correct answer", is_required = False)
     
     @model_validator(mode="after")
     def validate_answer(self):
