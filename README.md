@@ -63,5 +63,9 @@ prompt_template = PROMPT_TECHNIQUES["Zero-Shot"]
 
 - Adding explanation to answers
 
+#### Misc
+
+Added missing dependency `loguru` to `requirements.txt`
+
 ### License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
