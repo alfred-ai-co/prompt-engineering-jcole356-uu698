@@ -46,6 +46,10 @@ class View:
             form.title("Generate Quiz")
             
             topic = form.text_input('Enter a topic for the quiz: ')
+            difficulty = form.radio(
+                "Select difficulty",
+                ["Easy", "Hard"]
+            )
             generate = form.form_submit_button('Generate')
             
             if generate:
@@ -57,6 +61,7 @@ class View:
                             model=ss.model,
                             provider=ss.provider,
                             topic=topic,
+                            difficulty=difficulty,
                             prompt_template=ss.current_prompt
                         )
                         container.empty()
