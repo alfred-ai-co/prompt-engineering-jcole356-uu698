@@ -57,5 +57,20 @@ from prompts import PROMPT_TECHNIQUES
 prompt_template = PROMPT_TECHNIQUES["Zero-Shot"]
 ```
 
+### Submission
+
+#### Improvements
+
+While all of the prompt types have been rewritten, the following new features were only added to the Tree of Thought prompt:
+
+- Added explanations for incorrect answers
+- Added difficulty setting (Easy/Hard)
+- Added hints to Easy quizes
+
+#### Misc
+
+Added missing dependency `loguru` to `requirements.txt`.  I was unable to run the application without manually installing
+this dependency.
+
 ### License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

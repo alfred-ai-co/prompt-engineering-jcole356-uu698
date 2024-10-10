@@ -35,12 +35,14 @@ class Controller:
         model: LLM,
         provider: Provider,
         topic: str,
+        difficulty: str,
         prompt_template: str
     ):
         ss.quiz = self.generate_quiz_from_topic(
             model=model,
             provider=provider,
             topic=topic,
+            difficulty=difficulty,
             prompt_template=prompt_template
         )
         ss.current_question_index = 0
@@ -68,6 +70,7 @@ class Controller:
         model: LLM,
         provider: Provider,
         topic: str,
+        difficulty: str,
         prompt_template: str
     ) -> Quiz:
         chain = init_quiz_generator_chain(
@@ -76,4 +79,5 @@ class Controller:
             prompt_template,
             prompt_name=ss.current_prompt_name
         )
-        return chain.invoke({"input": topic})
+        return chain.invoke({"input": topic, "difficulty": difficulty})
+    

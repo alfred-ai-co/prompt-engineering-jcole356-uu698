@@ -66,7 +66,7 @@ def init_quiz_generator_chain(
     parser = PydanticOutputParser(pydantic_object=Quiz)
     prompt = PromptTemplate(
         template = prompt_template,
-        input_variables = ["input"],
+        input_variables = ["input", "difficulty"],
         partial_variables={"format_instructions": parser.get_format_instructions()}
     )
     chain = (
@@ -74,5 +74,5 @@ def init_quiz_generator_chain(
         | ModelGateway.get_adapter(provider, model, temperature=0)
         | parser
     ).with_config({"run_name": f"Quiz Generator - {prompt_name}"})
-    logger.debug(f"Formatted Prompt Preview: {prompt.format(input='test')}")
+    logger.debug(f"Formatted Prompt Preview: {prompt.format(input='test', difficulty='easy')}")
     return chain
