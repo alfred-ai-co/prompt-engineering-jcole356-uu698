@@ -61,7 +61,13 @@ prompt_template = PROMPT_TECHNIQUES["Zero-Shot"]
 
 #### Improvements
 
-- Adding explanation to answers
+While all of the prompt types have been rewritten, the following new features were only added to the Tree of Thought prompt:
+
+- Added explanations for incorrect answers
+- Added difficulty setting (Easy/Hard)
+- Added hints to Easy quizes
+
+The main challenge I ran into was the order of which I introduced certain instructions.  I found that depending on where I introduced the concept of the explanation.  When I added it earlier in the prompt, the LLM decided to add another property to the JSON that wasn't expected by the model.
 
 #### Misc
 
