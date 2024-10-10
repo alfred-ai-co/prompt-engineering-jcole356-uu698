@@ -80,3 +80,4 @@ class Controller:
             prompt_name=ss.current_prompt_name
         )
         return chain.invoke({"input": topic, "difficulty": difficulty})
+    

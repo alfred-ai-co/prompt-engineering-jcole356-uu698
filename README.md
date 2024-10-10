@@ -72,7 +72,8 @@ The main challenge I ran into was the order of which I introduced certain instru
 
 #### Misc
 
-Added missing dependency `loguru` to `requirements.txt`
+Added missing dependency `loguru` to `requirements.txt`.  I was unable to run the application without manually installing
+this dependency.
 
 ### License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
