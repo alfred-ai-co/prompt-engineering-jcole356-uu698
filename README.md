@@ -67,7 +67,8 @@ While all of the prompt types have been rewritten, the following new features we
 - Added difficulty setting (Easy/Hard)
 - Added hints to Easy quizes
 
-The main challenge I ran into was the order of which I introduced certain instructions.  I found that depending on where I introduced the concept of the explanation.  When I added it earlier in the prompt, the LLM decided to add another property to the JSON that wasn't expected by the model.
+The main challenge I ran into was the order of which I introduced certain instructions.  I found that where I introduced the concept of the hint impacted whether I received the expected result.  When I added it later in the prompt, the LLM decided to add another property to the JSON that wasn't expected by the model.  Overall, I found that without the
+`format_instructions`, the LLM was still able to interpret the prompts and return the expected schema.
 
 #### Misc
 
