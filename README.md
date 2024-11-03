@@ -60,7 +60,7 @@ For steps 4 and 5 substitute something for `<image_name>` below
 
 4. `docker build -t <image_name> .`
 
-5. `docker run --env-file -p 8501:8501 ./.env <image_name>`
+5. `docker run --env-file ./.env -p 8501:8501 <image_name`
 
 ### Usage
 
