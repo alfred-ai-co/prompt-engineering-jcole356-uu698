@@ -1,7 +1,9 @@
 # prompt-engineering
+
 Template Repository for the Journey 1 Prompt Engineering mission demonstrating how prompting and structured instructions can affect outputs.
 
 ### Overview
+
 This is a Python project demonstrating how prompting and structured instructions can affect outputs. It uses different techniques to generate AI prompts.
 
 ## Project Structure
@@ -34,6 +36,8 @@ git clone https://github.com/yourusername/prompt-engineering.git
 cd prompt-engineering
 ```
 
+### Local Install
+
 3. Install the required dependencies:
 
 ```sh
@@ -48,7 +52,18 @@ streamlit run main.py
 
 5. Open the application in your browser at http://localhost:8501.
 
+### Docker
+
+3. Install Docker Desktop
+
+For steps 4 and 5 substitute something for `<image_name>` below
+
+4. `docker build -t <image_name> .`
+
+5. `docker run --env-file ./.env -p 8501:8501 <image_name`
+
 ### Usage
+
 To use a specific prompt technique, import the `PROMPT_TECHNIQUES` dictionary from the `prompts` module and pass the desired technique as a key. For example, to use the Zero-Shot technique, you can do the following:
 
 ```python
@@ -58,4 +73,5 @@ prompt_template = PROMPT_TECHNIQUES["Zero-Shot"]
 ```
 
 ### License
+
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
